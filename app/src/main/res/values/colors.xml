@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue_out">#445CB4</color>
+    <color name="text_color">#fcfbf8</color>
+    <color name="yellowButton">#FFCC41</color>
+
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#FF7043</color>
+    <color name="colorAccent">#FFAB40</color>
+    <color name="colorGray">#8C8C8C</color>
+    <color name="redblack">#1f1f1f</color>
 </resources>
