@@ -16,19 +16,19 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_margin="10dp"
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
             android:background="@drawable/moveback_temp" />
 
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginTop="15dp"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
             android:background="@color/redblack"
             android:src="@drawable/m_rogo" />
 
@@ -71,7 +71,7 @@
                 <EditText
                     android:id="@+id/join_id"
                     android:layout_width="265dp"
-                    android:layout_height="45dp"
+                    android:layout_height="50dp"
                     android:layout_below="@+id/textViewId"
                     android:gravity="left|center"
                     android:ems="12"
@@ -82,14 +82,16 @@
                     android:id="@+id/check_button_id"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="중복확인"
                     android:layout_toRightOf="@+id/join_id"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="25dp"
-                    android:gravity="left|center"
+                    android:gravity="center"
+                    android:padding="0dp"
+
                     android:textColor="@color/black"
                     android:textSize="16dp"
                     android:textStyle="bold"
+                    android:text="중복확인"
                     android:background="@drawable/loginbutton2"/>
 
                 <!-- 이메일 -->
@@ -106,7 +108,7 @@
                 <EditText
                     android:id="@+id/join_email"
                     android:layout_width="265dp"
-                    android:layout_height="45dp"
+                    android:layout_height="50dp"
                     android:layout_below="@+id/textViewEmail"
                     android:gravity="left|center"
                     android:ems="12"
@@ -118,13 +120,14 @@
                     android:id="@+id/check_button_email"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="중복확인"
-
                     android:layout_toRightOf="@+id/join_email"
                     android:layout_below="@+id/check_button_id"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="20dp"
-                    android:gravity="left|center"
+                    android:gravity="center"
+                    android:padding="0dp"
+
+                    android:text="중복확인"
                     android:textColor="@color/black"
                     android:textSize="16dp"
                     android:textStyle="bold"
@@ -209,7 +212,7 @@
 
                 <EditText
                     android:id="@+id/join_phone"
-                    android:layout_width="265dp"
+                    android:layout_width="330dp"
                     android:layout_height="50dp"
                     android:layout_below="@id/textViewPhone"
                     android:gravity="left|center"
@@ -217,22 +220,6 @@
                     android:textSize="14sp"
                     android:hint="'-'포함하여 입력"
                     android:inputType="phone"/>
-
-                <Button
-                    android:id="@+id/check_button_phone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:text="중복확인"
-
-                    android:layout_toRightOf="@+id/join_phone"
-                    android:layout_below="@+id/join_name"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="left|center"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:background="@drawable/loginbutton2" />
 
                 <!-- 생년월일 -->
                 <TextView
@@ -262,16 +249,19 @@
                     style="@style/defaultButton"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="50dp"
-                    android:background="@drawable/loginbutton1"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginBottom="70dp"
 
+                    android:background="@drawable/loginbutton1"
+                    android:gravity="center"
                     android:text="가입"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
                     android:textColor="#000000"
-                    android:gravity="center"/>
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <!-- 취소 버튼 -->
                 <Button
@@ -279,16 +269,18 @@
                     style="@style/defaultButton"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
-                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="50dp"
-                    android:background="@drawable/loginbutton1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="70dp"
+                    android:layout_marginBottom="70dp"
 
-                    android:text="가입"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:background="@drawable/loginbutton3"
+                    android:gravity="center"
+                    android:text="취소"
                     android:textColor="#000000"
-                    android:gravity="center"/>
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>

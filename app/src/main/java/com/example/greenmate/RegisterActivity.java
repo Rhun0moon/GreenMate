@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -18,9 +19,9 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class RegisterActivity extends Activity {
+public class RegisterActivity extends AppCompatActivity {
     private EditText join_id, join_email, join_pw, join_pwck, join_name, join_phone, join_birth;
-    private Button join_button, check_button, delete_button;
+    private Button back_button, join_button, check_button, delete_button;
     private AlertDialog dialog;
     private boolean validate = false;
 
@@ -31,17 +32,26 @@ public class RegisterActivity extends Activity {
 
         //아이디값 찾아주기
         join_id = findViewById(R.id.join_id);
+        join_email = findViewById( R.id.join_email );
         join_pw = findViewById( R.id.join_pw );
         join_pwck = findViewById(R.id.join_pwck);
         join_name = findViewById( R.id.join_name );
-        join_email = findViewById( R.id.join_email );
-        join_birth = findViewById(R.id.join_birth);
         join_phone = findViewById(R.id.join_phone);
+        join_birth = findViewById(R.id.join_birth);
 
-        //아이디 중복 체크
+        // 뒤로가기 버튼
+        back_button = findViewById(R.id.back_btn);
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class );
+                startActivity(intent);
+            }
+        });
+
+        // 중복확인 버튼 - 아이디 중복 체크 -> 코드수정필요
         check_button = findViewById(R.id.check_button_id);
         check_button.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 String m_id = join_id.getText().toString();
@@ -82,19 +92,69 @@ public class RegisterActivity extends Activity {
                     }
                 };
 
-                ValidateRequest validateRequest = new ValidateRequest(m_id, responseListener);
+                ValidateRequest validateRequest = new ValidateRequest("UserId", m_id, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                 queue.add(validateRequest);
             }
         });
 
-        join_button = findViewById( R.id.join_button );
+        // 중복확인 버튼 - 이메일 중복 체크 -> 코드수정필요
+        check_button = findViewById(R.id.check_button_email);
+        check_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String m_email = join_email.getText().toString();
+                if (validate) {
+                    return; //검증 완료
+                }
+
+                if (m_email.equals("")) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                    dialog = builder.setMessage("이메일을 입력하세요.").setPositiveButton("확인", null).create();
+                    dialog.show();
+                    return;
+                }
+
+                Response.Listener<String> responseListener = new Response.Listener<String>(){
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonResponse = new JSONObject(response);
+                            boolean success = jsonResponse.getBoolean("success");
+
+                            if (success) {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                                dialog = builder.setMessage("사용할 수 있는 이메일입니다.").setPositiveButton("확인", null).create();
+                                dialog.show();
+                                join_email.setEnabled(false); //아이디값 고정
+                                validate = true; //검증 완료
+                                check_button.setBackgroundColor(getResources().getColor(R.color.colorGray));
+                            }
+                            else {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                                dialog = builder.setMessage("이미 존재하는 이메일입니다.").setNegativeButton("확인", null).create();
+                                dialog.show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+
+                ValidateRequest validateRequest = new ValidateRequest("UserEmail", m_email, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
+                queue.add(validateRequest);
+            }
+        });
+
+        // 가입 버튼
+        join_button = findViewById( R.id.join_btn );
         join_button.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 final String m_id = join_id.getText().toString();
-                final String m_pw = join_password.getText().toString();
+                final String m_pw = join_pw.getText().toString();
                 final String PassCk = join_pwck.getText().toString();
                 final String m_name = join_name.getText().toString();
                 final String m_email = join_email.getText().toString();
@@ -157,7 +217,8 @@ public class RegisterActivity extends Activity {
             }
         });
 
-        delete_button = findViewById(R.id.delete_button);
+        // 취소 버튼
+        delete_button = findViewById(R.id.delte_btn);
         delete_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
