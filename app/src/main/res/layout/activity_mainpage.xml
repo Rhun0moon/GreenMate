@@ -1,92 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainpageActivity"
-    android:background="@drawable/m_ecodetailback"
     android:orientation="vertical"
-    >
+    tools:context=".MainpageActivity"
+    android:background="@drawable/m_mainpage" >
+    <!-- android:background="@drawable/m_test" -->
+    <!-- android:background="@drawable/m_mainpage" -->
+    <!-- android:background="@color/redblack" -->
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
-        android:background="@color/redblack"
-        android:src="@drawable/m_rogo" />
-
+    <!-- Logo -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="현재 페이지는 메인입니다."
-            android:textColor="#FFFFFF"
-            android:textSize="30dp"/>
+        android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/ecosearch_button"
-            android:text="eco검색"
-            android:textSize="18dp"
-            android:textStyle="bold"
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/icon_moveback" />
 
-            android:layout_width="385dp"
-            android:layout_height="51dp"
-
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="300dp"
-
-            android:background="@drawable/loginbutton1"
-            android:textColor="#000000"/>
-
-        <Button
-            android:id="@+id/gohome"
-
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-
-            android:layout_marginLeft="65dp"
-            android:layout_marginTop="775dp"
-
-            android:background="@drawable/m_homerogo"
-            android:text="."
-            android:textSize="0sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/goqna"
-
-            android:layout_width="35dp"
-            android:layout_height="25dp"
-
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="775dp"
-
-            android:background="@drawable/m_qna"
-            android:text="."
-            android:textSize="0sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/gomy"
-
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="775dp"
-            android:layout_marginRight="65dp"
-
-            android:background="@drawable/m_myrogo"
-            android:text="."
-            android:textSize="0sp"
-            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:background="@color/redblack"
+            android:src="@drawable/icon_logo" />
     </RelativeLayout>
 
+    <!-- Main -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_width="372dp"
+            android:layout_height="198dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp" >
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/sliderViewPager"
+                android:layout_gravity="center"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="372dp"
+            android:layout_height="198dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/banner1" />
+
+
+    </RelativeLayout>
+
+    <!-- Foot -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigationview"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="bottom"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="unlabeled"
+        android:background="@color/text_color"
+        app:menu="@menu/bottom_menu" />
 </LinearLayout>

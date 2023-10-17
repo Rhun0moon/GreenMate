@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:title="Home"
+        android:icon="@drawable/icon_home_gray"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/qna"
+        android:enabled="true"
+        android:title="Quiz"
+        android:icon="@drawable/icon_qna_gray"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mypage"
+        android:enabled="true"
+        android:title="My Page"
+        android:icon="@drawable/icon_my_gray"
+        app:showAsAction="always" />
+</menu>

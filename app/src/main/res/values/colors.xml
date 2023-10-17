@@ -11,4 +11,9 @@
     <color name="colorAccent">#FFAB40</color>
     <color name="colorGray">#8C8C8C</color>
     <color name="redblack">#1f1f1f</color>
+
+    <color name="MainColorY">#FFCC41</color>
+    <color name="MainColorB">#445CB4</color>
+    <color name="MainColorS">#63BFF3</color>
+    <color name="MainColorG">#5AE3B1</color>
 </resources>
