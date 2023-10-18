@@ -28,16 +28,6 @@ public class LoginActivity extends AppCompatActivity {
         login_id = findViewById( R.id.login_id );
         login_pw = findViewById( R.id.login_pw );
 
-        // 회원가입 버튼
-        join_button = findViewById( R.id.join_btn );
-        join_button.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent( LoginActivity.this, RegisterActivity.class );
-                startActivity( intent );
-            }
-        });
-
         // 로그인 버튼
         login_button = findViewById( R.id.login_btn );
         login_button.setOnClickListener( new View.OnClickListener() {
@@ -86,6 +76,16 @@ public class LoginActivity extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue( LoginActivity.this );
                 queue.add( loginRequest );
                 */
+            }
+        });
+
+        // 회원가입 버튼
+        join_button = findViewById( R.id.join_btn );
+        join_button.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent( LoginActivity.this, RegisterActivity.class );
+                startActivity( intent );
             }
         });
     }
