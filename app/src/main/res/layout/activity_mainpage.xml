@@ -44,15 +44,25 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/white" />
+
+        <!-- banner -->
         <FrameLayout
             android:layout_width="372dp"
             android:layout_height="198dp"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
-            android:layout_marginTop="15dp" >
+            android:layout_marginTop="70dp" >
+            <!-- android:layout_marginTop="15dp" -->
 
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/sliderViewPager"
+                android:id="@+id/sliderViewPagerBanner"
                 android:layout_gravity="center"
                 android:clipToPadding="false"
                 android:clipChildren="false"
@@ -60,22 +70,141 @@
                 android:layout_height="match_parent" />
 
             <me.relex.circleindicator.CircleIndicator3
-                android:id="@+id/indicator"
+                android:id="@+id/indicatorBanner"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="bottom" />
         </FrameLayout>
 
-        <ImageView
-            android:layout_width="372dp"
-            android:layout_height="198dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/banner1" />
+        <!-- button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation = "horizontal"
+            android:layout_marginTop="295dp">
+            
+            <Button
+                android:id="@+id/ecodetail_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:paddingTop="15dp"
+
+                android:text="분리수거방법"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/icon_ecodetail"
+                android:backgroundTint="@color/MainColorB"
+                android:background="@drawable/button_patten02" />
+
+            <!-- android:background="@drawable/button_pattern" -->
+            <Button
+                android:id="@+id/ecosearch_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingTop="15dp"
+
+                android:text="친환경 제품"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/icon_ecosearch"
+                android:backgroundTint="@color/MainColorY"
+                android:background="@drawable/button_patten02" />
+
+            <Button
+                android:id="@+id/ecoplace_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="15dp"
+
+                android:text="지역별 배출요령"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:drawableTop="@drawable/icon_ecoplace"
+                android:backgroundTint="@color/MainColorG"
+                android:background="@drawable/button_patten02" />
 
 
+        </LinearLayout>
+
+        <!-- news -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_alignParentBottom="true" >
+            <!-- android:background="@drawable/joinedit" -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <!-- title -->
+                <TextView
+                    android:id="@+id/textViewNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="NEWS" />
+
+                <!-- content -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/textViewNews"
+                        android:layout_marginTop="25dp" >
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/sliderViewPagerNews"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+
+                            app:layout_constraintBottom_toTopOf="@id/newsContent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_weight="1" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/newsContent"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/sliderViewPagerNews"
+                            app:layout_constraintVertical_weight="2">
+
+                            <TextView
+                                android:id="@+id/newsContentText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#333333"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
     </RelativeLayout>
 
     <!-- Foot -->

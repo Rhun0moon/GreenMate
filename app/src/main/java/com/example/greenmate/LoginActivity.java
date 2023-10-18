@@ -43,9 +43,13 @@ public class LoginActivity extends AppCompatActivity {
         login_button.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, MainpageActivity.class );
+                startActivity(intent);
+
+                /*
                 String UserEmail = login_id.getText().toString();
                 String UserPwd = login_pw.getText().toString();
-/*
+
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -80,10 +84,8 @@ public class LoginActivity extends AppCompatActivity {
                 };
                 LoginRequest loginRequest = new LoginRequest( UserEmail, UserPwd, responseListener );
                 RequestQueue queue = Volley.newRequestQueue( LoginActivity.this );
-                queue.add( loginRequest );*/
-                Intent intent = new Intent(getApplicationContext(), MainpageActivity.class );
-                startActivity(intent);
-
+                queue.add( loginRequest );
+                */
             }
         });
     }

@@ -31,10 +31,10 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/imageViewLogo"
             android:layout_marginTop="100dp"
-            android:paddingTop="10dp"
             android:paddingLeft="20dp"
             android:background="@drawable/loginedit"
 
+            android:gravity="center_vertical"
             android:textColorHint="#FFFFFF"
             android:textSize="18dp"
             android:textColor="#FFFFFF"
@@ -48,10 +48,10 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/login_id"
             android:layout_marginTop="10dp"
-            android:paddingTop="10dp"
             android:paddingLeft="20dp"
             android:background="@drawable/loginedit"
 
+            android:gravity="center_vertical"
             android:textColorHint="#FFFFFF"
             android:textSize="18dp"
             android:textColor="#FFFFFF"
@@ -61,12 +61,13 @@
         <!-- 로그인 버튼 -->
         <Button
             android:id="@+id/login_btn"
+            style="@style/defaultButton"
             android:layout_width="385dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/login_pw"
             android:layout_marginTop="20dp"
-            android:background="@drawable/loginbutton1"
+            android:background="@drawable/button_patten01"
 
             android:textColor="#000000"
             android:text="로그인"
@@ -82,7 +83,8 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/login_btn"
             android:layout_marginTop="10dp"
-            android:background="@drawable/loginbutton2"
+            android:backgroundTint="@color/redblack"
+            android:background="@drawable/button_patten01"
 
             android:text="회원가입"
             android:textSize="18dp"

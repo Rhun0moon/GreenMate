@@ -31,7 +31,7 @@
             android:layout_height="70dp"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:background="@color/redblack"
             android:src="@drawable/icon_logo" />
 
@@ -39,7 +39,7 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView1"
+            android:layout_below="@+id/imageViewLogo"
             android:layout_centerInParent="true"
             android:layout_marginTop="13dp"
             android:layout_marginBottom="30dp"
@@ -50,7 +50,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="768dp"
+            android:layout_height="730dp"
             android:layout_alignParentBottom="true"
             android:background="@drawable/joinedit" >
             <!-- android:background="@drawable/joinedit" -->
@@ -91,11 +91,11 @@
                     android:gravity="center"
                     android:padding="0dp"
 
+                    android:background="@drawable/button_patten01"
                     android:textColor="@color/black"
                     android:textSize="16dp"
                     android:textStyle="bold"
-                    android:text="중복확인"
-                    android:background="@drawable/loginbutton2"/>
+                    android:text="중복확인" />
 
                 <!-- 이메일 -->
                 <TextView
@@ -130,11 +130,11 @@
                     android:gravity="center"
                     android:padding="0dp"
 
+                    android:background="@drawable/button_patten01"
                     android:text="중복확인"
                     android:textColor="@color/black"
                     android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:background="@drawable/loginbutton2" />
+                    android:textStyle="bold" />
 
                 <!-- 비밀번호 -->
                 <TextView
@@ -257,9 +257,9 @@
                     android:layout_centerVertical="true"
                     android:layout_gravity="left"
                     android:layout_marginLeft="70dp"
-                    android:layout_marginBottom="70dp"
+                    android:layout_marginBottom="40dp"
 
-                    android:background="@drawable/loginbutton1"
+                    android:background="@drawable/button_patten01"
                     android:gravity="center"
                     android:text="가입"
                     android:textColor="#000000"
@@ -269,16 +269,16 @@
                 <!-- 취소 버튼 -->
                 <Button
                     android:id="@+id/delte_btn"
-                    style="@style/defaultButton"
+                    style="@style/deleteButton"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="70dp"
-                    android:layout_marginBottom="70dp"
+                    android:layout_marginBottom="40dp"
 
-                    android:background="@drawable/loginbutton3"
+                    android:background="@drawable/button_patten01"
                     android:gravity="center"
                     android:text="취소"
                     android:textColor="#000000"

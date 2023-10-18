@@ -51,6 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         // 중복확인 버튼 - 아이디 중복 체크 -> 코드수정필요
         check_button = findViewById(R.id.check_button_id);
+        /*
         check_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,9 +98,11 @@ public class RegisterActivity extends AppCompatActivity {
                 queue.add(validateRequest);
             }
         });
+        */
 
         // 중복확인 버튼 - 이메일 중복 체크 -> 코드수정필요
         check_button = findViewById(R.id.check_button_email);
+        /*
         check_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -146,13 +149,19 @@ public class RegisterActivity extends AppCompatActivity {
                 queue.add(validateRequest);
             }
         });
+        */
 
         // 가입 버튼
         join_button = findViewById( R.id.join_btn );
+
         join_button.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(RegisterActivity.this, MainpageActivity.class );
+                startActivity(intent);
+
+                /*
                 final String m_id = join_id.getText().toString();
                 final String m_pw = join_pw.getText().toString();
                 final String PassCk = join_pwck.getText().toString();
@@ -214,8 +223,10 @@ public class RegisterActivity extends AppCompatActivity {
                 RegisterRequest registerRequest = new RegisterRequest( m_id, m_pw, m_name, m_email, m_birth, m_phone, responseListener);
                 RequestQueue queue = Volley.newRequestQueue( RegisterActivity.this );
                 queue.add( registerRequest );
+                */
             }
         });
+
 
         // 취소 버튼
         delete_button = findViewById(R.id.delte_btn);
