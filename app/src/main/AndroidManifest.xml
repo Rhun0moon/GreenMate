@@ -26,6 +26,7 @@
         <activity android:name=".MainpageActivity" android:label="Mainpage 액티비티" />
         <activity android:name=".LoginActivity" android:label="Login 액티비티" />
         <activity android:name=".RegisterActivity" android:label="join 액티비티" />
+        <activity android:name=".QuizActivity" android:label="quiz 액티비티" />
     </application>
 
 </manifest>
