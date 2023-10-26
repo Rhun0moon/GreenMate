@@ -1,9 +1,6 @@
 package com.example.greenmate;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -18,7 +15,7 @@ import java.util.List;
 
 import me.relex.circleindicator.CircleIndicator3;
 
-public class MainpageActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     private Button gohome_button, goqna_button, gomy_button;
     private Button ecodetail_btn, ecosearch_btn, ecoplace_btn;
     private ViewPager2 mPager_banner, mPager_news;
@@ -31,16 +28,16 @@ public class MainpageActivity extends AppCompatActivity {
     private TextView news_contentText;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainpage);
+        setContentView(R.layout.activity_home);
 
         /*
         gohome_button = findViewById(R.id.gohome);
         gohome_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainpageActivity.class );
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class );
                 startActivity(intent);
             }
         });
@@ -91,7 +88,7 @@ public class MainpageActivity extends AppCompatActivity {
         });
         */
 
-
+        /*
         // banner slide
         //ViewPager2
         mPager_banner = findViewById(R.id.sliderViewPagerBanner);
@@ -122,7 +119,9 @@ public class MainpageActivity extends AppCompatActivity {
                 mIndicator.animatePageSelected(position%num_page);
             }
         });
+        */
 
+        /*
         // news slide
         mPager_news = findViewById(R.id.sliderViewPagerNews);
         news_contentText = findViewById(R.id.newsContent);
@@ -138,8 +137,9 @@ public class MainpageActivity extends AppCompatActivity {
         news_textList.add("[날씨] 쌀쌀함 더하는 가을비…비 그친 뒤 기온 더 떨어져");
 
         mainInitViewPager2();
+        */
     }
-
+/*
     private void mainInitViewPager2() {
         news_contentText.setText("경기도, 어린이집 집단급식소 1598곳 식중독 예방 점검");
         mPager_news.setClipToPadding(false);
@@ -162,5 +162,6 @@ public class MainpageActivity extends AppCompatActivity {
             }
         });
     }
+*/
 }
 

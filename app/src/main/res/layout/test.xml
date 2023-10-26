@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainpageActivity"
+    tools:context=".HomeActivity"
     android:background="@color/redblack" >
     <!-- android:background="@drawable/m_test" -->
     <!-- android:background="@drawable/m_mainpage" -->
@@ -85,7 +85,7 @@
             android:layout_height="90dp"
             android:orientation = "horizontal"
             android:layout_marginTop="230dp">
-            
+
             <Button
                 android:id="@+id/ecodetail_btn"
                 android:layout_width="0dp"
@@ -165,44 +165,45 @@
                     android:text="NEWS" />
 
                 <!-- content -->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/textViewNews"
-                        android:layout_marginTop="25dp" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/textViewNews"
+                    android:layout_marginTop="25dp" >
 
-                        <androidx.viewpager2.widget.ViewPager2
-                            android:id="@+id/sliderViewPagerNews"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                    <!--
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/sliderViewPagerNews"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
 
-                            app:layout_constraintBottom_toTopOf="@id/newsContent"
+                        app:layout_constraintBottom_toTopOf="@id/newsContent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/newsContent"
+                        android:layout_width="150dp"
+                        android:layout_height="90dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/sliderViewPagerNews">
+
+                        <TextView
+                            android:id="@+id/newsContentText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#333333"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/newsContent"
-                            android:layout_width="150dp"
-                            android:layout_height="90dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/sliderViewPagerNews">
-
-                            <TextView
-                                android:id="@+id/newsContentText"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textColor="#333333"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </RelativeLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    -->
+                </RelativeLayout>
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>

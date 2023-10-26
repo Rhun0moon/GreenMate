@@ -1,6 +1,5 @@
 package com.example.greenmate;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,7 +20,7 @@ public class QuizActivity extends Activity {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainpageActivity.class );
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class );
                 startActivity(intent);
             }
         });
@@ -30,7 +29,7 @@ public class QuizActivity extends Activity {
         yes_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainpageActivity.class );
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class );
                 startActivity(intent);
             }
         });
@@ -39,7 +38,7 @@ public class QuizActivity extends Activity {
         no_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainpageActivity.class );
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class );
                 startActivity(intent);
             }
         });

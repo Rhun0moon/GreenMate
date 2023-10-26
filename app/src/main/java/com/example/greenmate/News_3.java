@@ -8,14 +8,14 @@ import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
-public class Banner_4 extends Fragment {
-    private ImageView imgBanner4;
+public class News_3 extends Fragment {
+    private ImageView imgNews3;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.banner_4, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.news_3, container, false);
 
-        imgBanner4 = rootView.findViewById(R.id.imgBanner4);
-        imgBanner4.setClipToOutline(true);
+        imgNews3 = rootView.findViewById(R.id.imgNews3);
+        imgNews3.setClipToOutline(true);
 
         return rootView;
     }

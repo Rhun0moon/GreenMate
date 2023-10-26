@@ -10,14 +10,14 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/qna"
+        android:id="@+id/quiz"
         android:enabled="true"
         android:title="Quiz"
         android:icon="@drawable/icon_qna_gray"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/mypage"
+        android:id="@+id/my"
         android:enabled="true"
         android:title="My Page"
         android:icon="@drawable/icon_my_gray"

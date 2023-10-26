@@ -5,17 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText login_id, login_pw;
@@ -33,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         login_button.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, MainpageActivity.class );
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class );
                 startActivity(intent);
 
                 /*
@@ -84,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         join_button.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( LoginActivity.this, RegisterActivity.class );
+                Intent intent = new Intent( LoginActivity.this, JoinActivity.class );
                 startActivity( intent );
             }
         });
