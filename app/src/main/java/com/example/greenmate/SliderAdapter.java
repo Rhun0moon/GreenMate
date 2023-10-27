@@ -9,7 +9,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.fragment.app.Fragment;
 
 public class SliderAdapter extends FragmentStateAdapter {
-
     public int mCount, mVer;
 
     public SliderAdapter(FragmentActivity fa, int count, int ver) {
@@ -40,6 +39,8 @@ public class SliderAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
+        if(mVer ==1) return 2000;
+        else if (mVer ==2) return mCount;
         return mCount;
     }
 
@@ -121,6 +122,57 @@ public class SliderAdapter extends FragmentStateAdapter {
     @Override
     public int getItemCount() {
         return 2000;
+    }
+
+    public int getRealPosition(int position) { return position % mCount; }
+
+}
+*/
+/* 버전3
+package com.example.greenmate;
+
+import android.content.Context;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.fragment.app.Fragment;
+
+public class SliderAdapter extends FragmentStateAdapter {
+    public int mCount, mVer;
+
+    public SliderAdapter(FragmentActivity fa, int count, int ver) {
+        super(fa);
+        mCount = count;
+        mVer = ver;
+    }
+
+    @NonNull
+    @Override
+    public Fragment createFragment(int position) {
+        int index = getRealPosition(position);
+
+        if(mVer ==1){
+            if(index==0) return new Banner_1();
+            else if(index==1) return new Banner_2();
+            else if(index==2) return new Banner_3();
+            else return new Banner_4();
+        }
+        else if (mVer ==2) {
+            if(index==0) return new News_1();
+            else if(index==1) return new News_2();
+            else if(index==2) return new News_3();
+            else return new News_4();
+        }
+        return null;
+    }
+
+    @Override
+    public int getItemCount() {
+        if(mVer ==1) return 2000;
+        else if (mVer ==2) return mCount;
+        return mCount;
     }
 
     public int getRealPosition(int position) { return position % mCount; }

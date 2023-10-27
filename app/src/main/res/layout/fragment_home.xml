@@ -129,7 +129,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/textViewNews"
-                    android:layout_marginTop="25dp" >
+                    android:layout_marginTop="10dp" >
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -140,36 +140,12 @@
 
                         <androidx.viewpager2.widget.ViewPager2
                             android:id="@+id/sliderViewPagerNews"
-                            android:layout_width="250dp"
+                            android:layout_width="300dp"
                             android:layout_height="match_parent"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             android:backgroundTint="@color/colorGray" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-                    <!-- android:layout_width="300dp" -->
-
-                    <!--
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/newsContent"
-                        android:layout_width="150dp"
-                        android:layout_height="90dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/sliderViewPagerNews">
-
-                        <TextView
-                            android:id="@+id/newsContentText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#333333"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    -->
-
                 </RelativeLayout>
             </RelativeLayout>
         </LinearLayout>

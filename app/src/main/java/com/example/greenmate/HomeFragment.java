@@ -23,9 +23,9 @@ import java.util.List;
 import me.relex.circleindicator.CircleIndicator3;
 
 public class HomeFragment extends Fragment {
-    private ViewPager2 mPagerBanner, mPagerNews;
-    private SliderAdapter pagerAdapterBanner, pagerAdapterNews;
-    private CircleIndicator3 mIndicator1;
+    private ViewPager2 mPagerBanner, mPagerNews, mPreviewPagerNews; // 미리보기용 ViewPager2 추가
+    private SliderAdapter pagerAdapterBanner, pagerAdapterNews, pagerAdapterPreviewNews; // 프리뷰용 Adapter 추가
+    private CircleIndicator3 mIndicator1, mPreviewIndicator1; // 프리뷰용 Indicator 추가
     private Handler sliderHandler = new Handler();
     private int num_page = 4;
     public HomeFragment() {
@@ -120,24 +120,11 @@ public class HomeFragment extends Fragment {
 
         // ViewPager Setting
         mPagerNews.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
-        mPagerNews.setOffscreenPageLimit(1); // 최대 이미지 수
 
         // ViewPager2 커스텀 설정
         mPagerNews.setClipToPadding(false);
         mPagerNews.setClipChildren(false);
-
-        //  Viewpager의 좌우 프리뷰
-        CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
-        compositePageTransformer.addTransformer(new MarginPageTransformer(5));
-        compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
-            @Override
-            public void transformPage(@NonNull View page, float position) {
-                float r = 1 - Math.abs(position);
-                page.setScaleY(0.85f + r * 0.15f);
-            }
-        });
-
-        mPagerNews.setPageTransformer(compositePageTransformer);
+        mPagerNews.setOffscreenPageLimit(1); // 최대 이미지 수
 
         return view;
     }
