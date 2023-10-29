@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/colorGray"
-                android:background="@drawable/button_patten02" />
+                android:background="@drawable/patten02" />
 
             <me.relex.circleindicator.CircleIndicator3
                 android:id="@+id/indicatorBanner"
@@ -61,7 +61,7 @@
                 android:textStyle="bold"
                 android:drawableTop="@drawable/icon_ecodetail"
                 android:backgroundTint="@color/MainColorB"
-                android:background="@drawable/button_patten02" />
+                android:background="@drawable/patten02" />
 
             <!-- android:background="@drawable/button_pattern" -->
             <Button
@@ -79,7 +79,7 @@
                 android:textStyle="bold"
                 android:drawableTop="@drawable/icon_ecosearch"
                 android:backgroundTint="@color/MainColorY"
-                android:background="@drawable/button_patten02" />
+                android:background="@drawable/patten02" />
 
             <Button
                 android:id="@+id/ecoplace_btn"
@@ -96,7 +96,7 @@
                 android:textStyle="bold"
                 android:drawableTop="@drawable/icon_ecoplace"
                 android:backgroundTint="@color/MainColorG"
-                android:background="@drawable/button_patten02" />
+                android:background="@drawable/patten02" />
 
 
         </LinearLayout>

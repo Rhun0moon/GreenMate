@@ -67,7 +67,7 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/login_pw"
             android:layout_marginTop="20dp"
-            android:background="@drawable/button_patten01"
+            android:background="@drawable/patten01"
 
             android:textColor="#000000"
             android:text="로그인"
@@ -84,7 +84,7 @@
             android:layout_below="@+id/login_btn"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/redblack"
-            android:background="@drawable/button_patten01"
+            android:background="@drawable/patten01"
 
             android:text="회원가입"
             android:textSize="18dp"

@@ -91,7 +91,7 @@
                     android:gravity="center"
                     android:padding="0dp"
 
-                    android:background="@drawable/button_patten01"
+                    android:background="@drawable/patten01"
                     android:textColor="@color/black"
                     android:textSize="16dp"
                     android:textStyle="bold"
@@ -130,7 +130,7 @@
                     android:gravity="center"
                     android:padding="0dp"
 
-                    android:background="@drawable/button_patten01"
+                    android:background="@drawable/patten01"
                     android:text="중복확인"
                     android:textColor="@color/black"
                     android:textSize="16dp"
@@ -259,7 +259,7 @@
                     android:layout_marginLeft="70dp"
                     android:layout_marginBottom="40dp"
 
-                    android:background="@drawable/button_patten01"
+                    android:background="@drawable/patten01"
                     android:gravity="center"
                     android:text="가입"
                     android:textColor="#000000"
@@ -278,7 +278,7 @@
                     android:layout_marginRight="70dp"
                     android:layout_marginBottom="40dp"
 
-                    android:background="@drawable/button_patten01"
+                    android:background="@drawable/patten01"
                     android:gravity="center"
                     android:text="취소"
                     android:textColor="#000000"

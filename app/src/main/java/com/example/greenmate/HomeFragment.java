@@ -23,10 +23,10 @@ import java.util.List;
 import me.relex.circleindicator.CircleIndicator3;
 
 public class HomeFragment extends Fragment {
-    private ViewPager2 mPagerBanner, mPagerNews, mPreviewPagerNews; // 미리보기용 ViewPager2 추가
-    private SliderAdapter pagerAdapterBanner, pagerAdapterNews, pagerAdapterPreviewNews; // 프리뷰용 Adapter 추가
-    private CircleIndicator3 mIndicator1, mPreviewIndicator1; // 프리뷰용 Indicator 추가
-    private Handler sliderHandler = new Handler();
+    private Button ecodetailButton, ecosearchButton, ecoplaceButton;
+    private ViewPager2 mPagerBanner, mPagerNews;
+    private SliderAdapter pagerAdapterBanner, pagerAdapterNews;
+    private CircleIndicator3 mIndicator1;
     private int num_page = 4;
     public HomeFragment() {
         // Required empty public constructor
@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment {
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_home, container, false);
 
         // ecodetailButton 버튼(분리수거방법)
-        Button ecodetailButton = view.findViewById(R.id.ecodetail_btn);
+        ecodetailButton = view.findViewById(R.id.ecodetail_btn);
         ecodetailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +53,7 @@ public class HomeFragment extends Fragment {
         });
 
         // ecosearchButton 버튼(친환경제품)
-        Button ecosearchButton = view.findViewById(R.id.ecosearch_btn);
+        ecosearchButton = view.findViewById(R.id.ecosearch_btn);
         ecosearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +64,7 @@ public class HomeFragment extends Fragment {
         });
 
         // ecoplaceButton 클릭(지역별배출요령)
-        Button ecoplaceButton = view.findViewById(R.id.ecoplace_btn);
+        ecoplaceButton = view.findViewById(R.id.ecoplace_btn);
         ecoplaceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
