@@ -1,12 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".HomeFragment"
-    android:background="@color/redblack">
+    android:background="@color/redblack" >
+
+    <!-- Hearder -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/redblack">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp" >
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_moveback" />
+
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:background="@color/redblack"
+                android:src="@drawable/icon_logo" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
     <!-- Main -->
     <RelativeLayout
         android:layout_width="match_parent"
@@ -56,9 +91,9 @@
                 android:paddingTop="15dp"
 
                 android:text="분리수거방법"
-                android:textSize="12dp"
+                android:textSize="10dp"
                 android:textColor="@color/white"
-                android:fontFamily="@font/suite_bold"
+                android:textStyle="bold"
                 android:drawableTop="@drawable/icon_ecodetail"
                 android:backgroundTint="@color/MainColorB"
                 android:background="@drawable/patten02" />
@@ -74,10 +109,9 @@
                 android:paddingTop="15dp"
 
                 android:text="친환경 제품"
-                android:textSize="12dp"
+                android:textSize="10dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:fontFamily="@font/suite_bold"
                 android:drawableTop="@drawable/icon_ecosearch"
                 android:backgroundTint="@color/MainColorY"
                 android:background="@drawable/patten02" />
@@ -92,10 +126,9 @@
                 android:paddingTop="15dp"
 
                 android:text="지역별 배출요령"
-                android:textSize="12dp"
+                android:textSize="10dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:fontFamily="@font/suite_bold"
                 android:drawableTop="@drawable/icon_ecoplace"
                 android:backgroundTint="@color/MainColorG"
                 android:background="@drawable/patten02" />
@@ -123,7 +156,7 @@
                     android:layout_marginLeft="20dp"
                     android:textSize="20dp"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/suite_bold"
+                    android:textStyle="bold"
                     android:text="NEWS" />
 
                 <!-- content -->
@@ -152,4 +185,15 @@
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>
+
+    <!-- Foot -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="unlabeled"
+        android:background="@color/text_color"
+        app:menu="@menu/bottom_menu" />
 </LinearLayout>

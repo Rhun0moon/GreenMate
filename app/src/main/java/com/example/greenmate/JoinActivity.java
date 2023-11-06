@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class JoinActivity extends AppCompatActivity {
     private EditText join_id, join_email, join_pw, join_pwck, join_name, join_phone, join_birth;
-    private Button back_button, join_button, check_button, delete_button;
+    private Button join_button, check_button, delete_button;
     private AlertDialog dialog;
     private boolean validate = false;
 
@@ -29,16 +29,6 @@ public class JoinActivity extends AppCompatActivity {
         join_name = findViewById( R.id.join_name );
         join_phone = findViewById(R.id.join_phone);
         join_birth = findViewById(R.id.join_birth);
-
-        // 뒤로가기 버튼
-        back_button = findViewById(R.id.back_btn);
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class );
-                startActivity(intent);
-            }
-        });
 
         // 중복확인 버튼 - 아이디 중복 체크 -> 코드수정필요
         check_button = findViewById(R.id.check_button_id);

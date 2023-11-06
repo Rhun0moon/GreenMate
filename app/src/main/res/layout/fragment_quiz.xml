@@ -26,9 +26,9 @@
             android:gravity="center"
             android:textAlignment="center"
             android:text="페트병은 내용물을 비워서 가볍게 헹구고 찌그러트려서 분리수거 해야 한다."
-            android:textSize="27dp"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textSize="30dp"
+            android:fontFamily="@font/suite_bold"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/yesBtn"

@@ -15,16 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/back_btn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/icon_moveback" />
-
         <ImageView
             android:id="@+id/imageViewLogo"
             android:layout_width="70dp"
@@ -46,7 +36,7 @@
             android:text="회원가입"
             android:textColor="#FFFFFF"
             android:textSize="23sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/suite_bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/suite_bold"
                     android:text="아이디" />
 
                 <EditText
@@ -94,7 +84,7 @@
                     android:background="@drawable/patten01"
                     android:textColor="@color/black"
                     android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/suite_bold"
                     android:text="중복확인" />
 
                 <!-- 이메일 -->
@@ -105,7 +95,7 @@
                     android:layout_below="@+id/join_id"
                     android:layout_marginTop="7dp"
                     android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/suite_bold"
                     android:text="이메일" />
 
                 <EditText
@@ -133,8 +123,8 @@
                     android:background="@drawable/patten01"
                     android:text="중복확인"
                     android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/suite_bold"
+                    android:textSize="16dp" />
 
                 <!-- 비밀번호 -->
                 <TextView
@@ -144,7 +134,7 @@
                     android:layout_below="@+id/join_email"
                     android:layout_marginTop="10dp"
                     android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/suite_bold"
                     android:text="비밀번호" />
 
                 <EditText
@@ -166,7 +156,7 @@
                     android:layout_below="@+id/join_pw"
                     android:layout_marginTop="10dp"
                     android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/suite_bold"
                     android:text="비밀번호 확인" />
 
                 <EditText
@@ -188,7 +178,7 @@
                     android:layout_below="@+id/join_pwck"
                     android:layout_marginTop="10dp"
                     android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/suite_bold"
                     android:text="이름" />
 
                 <EditText
@@ -210,7 +200,7 @@
                     android:layout_below="@+id/join_name"
                     android:layout_marginTop="10dp"
                     android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/suite_bold"
                     android:text="전화번호" />
 
                 <EditText
@@ -232,7 +222,7 @@
                     android:layout_below="@+id/join_phone"
                     android:layout_marginTop="10dp"
                     android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/suite_bold"
                     android:text="생년월일" />
 
                 <EditText
@@ -264,7 +254,7 @@
                     android:text="가입"
                     android:textColor="#000000"
                     android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/suite_bold" />
 
                 <!-- 취소 버튼 -->
                 <Button
@@ -283,7 +273,7 @@
                     android:text="취소"
                     android:textColor="#000000"
                     android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/suite_bold" />
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>

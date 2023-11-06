@@ -6,8 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
     android:background="@drawable/m_mypage" >
+    <!-- android:background="@drawable/m_mypage"
+         android:background="@color/redblack"    -->
 
     <!-- Hearder -->
     <androidx.appcompat.widget.Toolbar
@@ -76,7 +77,6 @@
                 android:textColor="@color/white"
                 android:textSize="20dp" />
         </LinearLayout>
-
         <!-- 레벨 텍스트 -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -151,7 +151,6 @@
                 android:progressDrawable="@drawable/patten03" />
             <!-- 5 20 35 50 65 80 100 -->
         </LinearLayout>
-
         <!-- 4개 버튼 -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -161,44 +160,162 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
 
+            <!-- 상단 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="175dp"
                 android:orientation="horizontal">
-                <Button
+                <!-- 정보수정 버튼 -->
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:gravity="left|bottom"
                     android:backgroundTint="@color/MainColorS"
-                    android:background="@drawable/patten_topleft"/>
-                <Button
+                    android:background="@drawable/patten_topleft"
+                    android:clickable="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="정보수정"
+                        android:textSize="20dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Edit profile"
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+                <!-- 경고횟수 버튼 -->
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:gravity="left|bottom"
                     android:backgroundTint="@color/MainColorG"
-                    android:background="@drawable/patten_topright"/>
+                    android:background="@drawable/patten_topright"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="경고횟수"
+                        android:textSize="20dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Warnings"
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+                </LinearLayout>
 
             </LinearLayout>
+            <!-- 하단 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="175dp"
                 android:orientation="horizontal">
-                <Button
+                <!-- 리뷰관리 버튼 -->
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:gravity="left|bottom"
                     android:backgroundTint="@color/MainColorY"
-                    android:background="@drawable/patten_bottomleft"/>
-                <Button
+                    android:background="@drawable/patten_bottomleft"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="리뷰관리"
+                        android:textSize="20dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Review"
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+                <!-- 회원탈퇴 버튼 -->
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:gravity="left|bottom"
                     android:backgroundTint="@color/MainColorB"
-                    android:background="@drawable/patten_bottomright"/>
+                    android:background="@drawable/patten_bottomright"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="회원탈퇴"
+                        android:textSize="20dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Withdrawal"
+                        android:textStyle="normal"
+                        android:textColor="@color/black" />
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
+        <!-- 로그아웃 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:clickable="true" >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_white_right"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="로그아웃"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+        <!--Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/icon_white_right"
+            android:drawableRight="10dp"
+            android:backgroundTint="@color/redblack"
+            android:text="로그아웃"
+            android:textColor="@color/white"-->
 
         <!-- -->
     </LinearLayout>

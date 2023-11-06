@@ -21,20 +21,12 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp" >
-
-            <Button
-                android:id="@+id/back_btn"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/icon_moveback" />
+            android:layout_marginBottom="15dp" >
 
             <ImageView
                 android:id="@+id/imageViewLogo"
                 android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
                 android:background="@color/redblack"

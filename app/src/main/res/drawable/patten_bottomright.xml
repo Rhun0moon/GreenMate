@@ -3,5 +3,5 @@
     android:shape="rectangle">
     <!-- 테두리 휘는 각도 -->
     <corners
-        android:bottomRightRadius="20dp"/>
+        android:bottomRightRadius="60dp"/>
 </shape>
