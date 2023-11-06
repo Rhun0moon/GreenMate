@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class MyFragment extends Fragment{
     private LinearLayout editprofileLayout, warningsLayout, reviewLayout, withdrawalLayout, logoutLayout;
@@ -33,7 +34,7 @@ public class MyFragment extends Fragment{
         editprofileLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), JoinActivity.class);
+                Intent intent = new Intent(getActivity(), EditActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,8 +44,9 @@ public class MyFragment extends Fragment{
         warningsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), JoinActivity.class);
-                startActivity(intent);
+                Toast.makeText(getActivity(),"준비중",Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(getActivity(), WarningsActivity.class);
+                //startActivity(intent);
             }
         });
 
@@ -53,8 +55,9 @@ public class MyFragment extends Fragment{
         reviewLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
+                Toast.makeText(getActivity(),"준비중",Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(getActivity(), ReviewActivity.class);
+                //startActivity(intent);
             }
         });
 
@@ -63,7 +66,7 @@ public class MyFragment extends Fragment{
         withdrawalLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), JoinActivity.class);
+                Intent intent = new Intent(getActivity(), WithdrawalActivity.class);
                 startActivity(intent);
             }
         });
@@ -73,7 +76,9 @@ public class MyFragment extends Fragment{
         logoutLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //로그아웃
+                Toast.makeText(getActivity(),"로그아웃되었습니다.",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
             }
         });
 

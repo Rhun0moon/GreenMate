@@ -15,7 +15,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +25,7 @@ import java.util.List;
 import me.relex.circleindicator.CircleIndicator3;
 
 public class HomeFragment extends Fragment {
-    private Button ecodetailButton, ecosearchButton, ecoplaceButton;
+    private LinearLayout ecodetailLayout, ecosearchLayout, ecoplaceLayout;
     private ViewPager2 mPagerBanner, mPagerNews;
     private SliderAdapter pagerAdapterBanner, pagerAdapterNews;
     private CircleIndicator3 mIndicator1;
@@ -41,36 +43,36 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_home, container, false);
 
-        // ecodetailButton 버튼(분리수거방법)
-        ecodetailButton = view.findViewById(R.id.ecodetail_btn);
-        ecodetailButton.setOnClickListener(new View.OnClickListener() {
+        // ecodetailLayout 레이아웃 (분리수거방법)
+        ecodetailLayout = view.findViewById(R.id.ecodetailLayout);
+        ecodetailLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 새로운 액티비티로 이동
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
+                Toast.makeText(getActivity(),"분리수거방법",Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(getActivity(), LoginActivity.class);
+                //startActivity(intent);
             }
         });
 
-        // ecosearchButton 버튼(친환경제품)
-        ecosearchButton = view.findViewById(R.id.ecosearch_btn);
-        ecosearchButton.setOnClickListener(new View.OnClickListener() {
+        // ecosearchLayout 레이아웃 (친환경제품)
+        ecosearchLayout = view.findViewById(R.id.ecosearchLayout);
+        ecosearchLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 새로운 액티비티로 이동
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
+                Toast.makeText(getActivity(),"친환경제품",Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(getActivity(), LoginActivity.class);
+                //startActivity(intent);
             }
         });
 
-        // ecoplaceButton 클릭(지역별배출요령)
-        ecoplaceButton = view.findViewById(R.id.ecoplace_btn);
-        ecoplaceButton.setOnClickListener(new View.OnClickListener() {
+        // ecoplaceLayout 레이아웃 (지역별배출요령)
+        ecoplaceLayout = view.findViewById(R.id.ecoplaceLayout);
+        ecoplaceLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 새로운 액티비티로 이동
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
+                Toast.makeText(getActivity(),"지역별배출요령",Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(getActivity(), LoginActivity.class);
+                //startActivity(intent);
             }
         });
 

@@ -25,7 +25,7 @@
 
         <!-- 아이디 -->
         <EditText
-            android:id="@+id/login_id"
+            android:id="@+id/loginId"
             android:layout_width="385dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
@@ -42,11 +42,11 @@
 
         <!-- 비밀번호 -->
         <EditText
-            android:id="@+id/login_pw"
+            android:id="@+id/loginPw"
             android:layout_width="385dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/login_id"
+            android:layout_below="@+id/loginId"
             android:layout_marginTop="10dp"
             android:paddingLeft="20dp"
             android:background="@drawable/loginedit"
@@ -60,12 +60,12 @@
 
         <!-- 로그인 버튼 -->
         <Button
-            android:id="@+id/login_btn"
+            android:id="@+id/loginBtn"
             style="@style/defaultButton"
             android:layout_width="385dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/login_pw"
+            android:layout_below="@+id/loginPw"
             android:layout_marginTop="20dp"
             android:background="@drawable/patten01"
 
@@ -77,11 +77,11 @@
 
         <!-- 회원가입 버튼 -->
         <Button
-            android:id="@+id/join_btn"
+            android:id="@+id/joinBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/login_btn"
+            android:layout_below="@+id/loginBtn"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/redblack"
             android:background="@drawable/patten01"

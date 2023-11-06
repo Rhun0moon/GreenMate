@@ -9,9 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class QuizFragment extends Fragment {
-    private Button yes_btn, no_btn;
+    private Button yesBtn, noBtn;
 
     public QuizFragment() {
         // Required empty public constructor
@@ -25,23 +26,19 @@ public class QuizFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_quiz, container, false);
 
-        yes_btn = view.findViewById(R.id.yesBtn);
-        yes_btn.setOnClickListener(new View.OnClickListener() {
+        yesBtn = view.findViewById(R.id.yesBtn);
+        yesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 새로운 액티비티로 이동
-                Intent intent = new Intent(getActivity(), HomeFragment.class);
-                startActivity(intent);
+                Toast.makeText(getActivity(),"YES",Toast.LENGTH_SHORT).show();
             }
         });
 
-        no_btn = view.findViewById(R.id.noBtn);
-        no_btn.setOnClickListener(new View.OnClickListener() {
+        noBtn = view.findViewById(R.id.noBtn);
+        noBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 새로운 액티비티로 이동
-                Intent intent = new Intent(getActivity(), HomeFragment.class);
-                startActivity(intent);
+                Toast.makeText(getActivity(),"NO",Toast.LENGTH_SHORT).show();
             }
         });
 

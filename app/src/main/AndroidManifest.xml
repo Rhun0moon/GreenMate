@@ -23,9 +23,15 @@
             </intent-filter>
         </activity>
 
+
+        <activity android:name=".EditActivity" android:label="edit profile 액티비티" />
+        <activity android:name=".WithdrawalActivity" android:label="withdrawal 액티비티" />
+        <activity android:name=".ReviewActivity" android:label="review 액티비티" />
+        <activity android:name=".WarningsActivity" android:label="warnings 액티비티" />
         <activity android:name=".MainActivity" android:label="Main 액티비티" />
         <activity android:name=".LoginActivity" android:label="Login 액티비티" />
         <activity android:name=".JoinActivity" android:label="join 액티비티" />
+
     </application>
 
 </manifest>

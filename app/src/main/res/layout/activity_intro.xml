@@ -10,7 +10,11 @@
     <ImageView
         android:id="@+id/imgViewIntro"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true">
     </ImageView>
-    <!-- android:background="@drawable/page_color" -->
+    <!--
+    android:background="@drawable/page_color"
+    android:adjustViewBounds="true" : 이미지 꽉차게
+     -->
 </LinearLayout>

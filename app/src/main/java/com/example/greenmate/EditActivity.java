@@ -11,16 +11,15 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class JoinActivity extends AppCompatActivity {
+public class EditActivity extends AppCompatActivity {
+
     private EditText joinId, joinEmail, joinPw, joinPwck, joinName, joinPhone, joinBirth;
-    private Button checkBtn, joinBtn, deleteBtn;
-    private AlertDialog dialog;
-    private boolean validate = false;
+    private Button checkBtn, editBtn, deleteBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView( R.layout.activity_join );
+        setContentView(R.layout.activity_edit);
 
         //아이디값 찾아주기
         joinId = findViewById(R.id.joinId);
@@ -31,16 +30,7 @@ public class JoinActivity extends AppCompatActivity {
         joinPhone = findViewById(R.id.joinPhone);
         joinBirth = findViewById(R.id.joinBirth);
 
-        // 중복확인 버튼 - 아이디 중복 체크 -> 코드수정필요
-        checkBtn = findViewById(R.id.checkIdBtn);
-        checkBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"아이디 중복 버튼",Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // 중복확인 버튼 - 이메일 중복 체크 -> 코드수정필요
+        // 중복확인 버튼 - 이메일 중복 체크
         checkBtn = findViewById(R.id.checkEmailBtn);
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +39,7 @@ public class JoinActivity extends AppCompatActivity {
             }
         });
 
-        // 중복확인 버튼 - 전화번호 중복 체크 -> 코드수정필요
+        // 중복확인 버튼 - 전화번호 중복 체크
         checkBtn = findViewById(R.id.checkPhoneBtn);
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,14 +48,16 @@ public class JoinActivity extends AppCompatActivity {
             }
         });
 
-        // 가입 버튼
-        joinBtn = findViewById( R.id.joinBtn );
-        joinBtn.setOnClickListener( new View.OnClickListener() {
+        // 수정 버튼
+        editBtn = findViewById( R.id.editBtn );
+        editBtn.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(JoinActivity.this, LoginActivity.class );
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class );
                 startActivity(intent);
-                Toast.makeText(getApplicationContext(),"가입되었습니다.",Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(getApplicationContext(),"수정이 완료되었습니다.",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -75,10 +67,13 @@ public class JoinActivity extends AppCompatActivity {
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(JoinActivity.this, LoginActivity.class );
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class );
                 startActivity(intent);
-                Toast.makeText(getApplicationContext(),"가입이 취소되었습니다.",Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(getApplicationContext(),"수정이 취소되었습니다.",Toast.LENGTH_SHORT).show();
             }
         });
+
     }
+
 }

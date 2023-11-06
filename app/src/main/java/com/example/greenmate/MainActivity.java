@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment homeFragment;
     QuizFragment quizFragment;
     MyFragment myFragment;
+    EcoDetailFragment ecoDetailFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         homeFragment = new HomeFragment();
         quizFragment = new QuizFragment();
         myFragment = new MyFragment();
+        ecoDetailFragment = new EcoDetailFragment();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
 

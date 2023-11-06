@@ -141,7 +141,7 @@
                     android:padding="20dp"
                     android:orientation="vertical"
                     android:gravity="left|bottom"
-                    android:backgroundTint="@color/MainColorS"
+                    android:backgroundTint="@color/MainColorY"
                     android:background="@drawable/patten_topleft"
                     android:clickable="true">
                     <TextView
@@ -168,7 +168,7 @@
                     android:padding="20dp"
                     android:orientation="vertical"
                     android:gravity="left|bottom"
-                    android:backgroundTint="@color/MainColorG"
+                    android:backgroundTint="@color/MainColorB"
                     android:background="@drawable/patten_topright"
                     android:clickable="true">
 
@@ -203,7 +203,7 @@
                     android:padding="20dp"
                     android:orientation="vertical"
                     android:gravity="left|bottom"
-                    android:backgroundTint="@color/MainColorY"
+                    android:backgroundTint="@color/MainColorS"
                     android:background="@drawable/patten_bottomleft"
                     android:clickable="true">
 
@@ -231,7 +231,7 @@
                     android:padding="20dp"
                     android:orientation="vertical"
                     android:gravity="left|bottom"
-                    android:backgroundTint="@color/MainColorB"
+                    android:backgroundTint="@color/MainColorG"
                     android:background="@drawable/patten_bottomright"
                     android:clickable="true">
 

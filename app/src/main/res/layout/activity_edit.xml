@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".JoinActivity"
+    tools:context=".EditActivity"
     android:background="@color/redblack">
     <!-- android:background="@drawable/m_join" -->
     <!-- android:background="@color/redblack" -->
@@ -33,10 +33,10 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="13dp"
             android:layout_marginBottom="30dp"
-            android:text="회원가입"
+            android:fontFamily="@font/suite_bold"
+            android:text="회원정보 수정"
             android:textColor="#FFFFFF"
-            android:textSize="23sp"
-            android:fontFamily="@font/suite_bold" />
+            android:textSize="23sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,22 +71,6 @@
                     android:hint="아이디"
                     android:textSize="14sp" />
 
-                <Button
-                    android:id="@+id/checkIdBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_toRightOf="@+id/joinId"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="25dp"
-                    android:gravity="center"
-                    android:padding="0dp"
-
-                    android:background="@drawable/patten01"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/suite_bold"
-                    android:text="중복확인" />
-
                 <!-- 이메일 -->
                 <TextView
                     android:id="@+id/textViewEmail"
@@ -114,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_toRightOf="@+id/joinEmail"
-                    android:layout_below="@+id/checkIdBtn"
+                    android:layout_below="@+id/joinId"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="25dp"
                     android:gravity="center"
@@ -253,9 +237,9 @@
                     android:hint="8자리 입력"
                     android:inputType="date" />
 
-                <!-- 가입 버튼 -->
+                <!-- 수정 버튼 -->
                 <Button
-                    android:id="@+id/joinBtn"
+                    android:id="@+id/editBtn"
                     style="@style/defaultButton"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
@@ -268,7 +252,7 @@
 
                     android:background="@drawable/patten01"
                     android:gravity="center"
-                    android:text="가입"
+                    android:text="수정"
                     android:textColor="#000000"
                     android:textSize="16dp"
                     android:fontFamily="@font/suite_bold" />

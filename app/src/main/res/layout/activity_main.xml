@@ -46,9 +46,9 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:layout_gravity="bottom"
-        app:itemIconSize="30dp"
+        app:itemIconSize="40dp"
         app:labelVisibilityMode="unlabeled"
         android:background="@color/text_color"
         app:menu="@menu/bottom_menu" />

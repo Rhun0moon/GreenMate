@@ -6,20 +6,20 @@
         android:id="@+id/home"
         android:enabled="true"
         android:title="Home"
-        android:icon="@drawable/icon_home_gray"
+        android:icon="@drawable/icon_gray_home"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/quiz"
         android:enabled="true"
         android:title="Quiz"
-        android:icon="@drawable/icon_qna_gray"
+        android:icon="@drawable/icon_gray_qna"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/my"
         android:enabled="true"
         android:title="My Page"
-        android:icon="@drawable/icon_my_gray"
+        android:icon="@drawable/icon_gray_my"
         app:showAsAction="always" />
 </menu>
