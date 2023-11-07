@@ -1,4 +1,4 @@
-package com.example.greenmate;
+package com.example.greenmate.banner;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,14 +8,16 @@ import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
-public class News_2 extends Fragment {
-    private ImageView imgNews2;
+import com.example.greenmate.R;
+
+public class Banner_1 extends Fragment {
+    private ImageView imgBanner1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.news_2, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.banner_1, container, false);
 
-        imgNews2 = rootView.findViewById(R.id.imgNews2);
-        imgNews2.setClipToOutline(true);
+        imgBanner1 = rootView.findViewById(R.id.imgBanner1);
+        imgBanner1.setClipToOutline(true);
 
         return rootView;
     }

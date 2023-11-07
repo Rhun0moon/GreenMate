@@ -39,15 +39,6 @@ public class EditActivity extends AppCompatActivity {
             }
         });
 
-        // 중복확인 버튼 - 전화번호 중복 체크
-        checkBtn = findViewById(R.id.checkPhoneBtn);
-        checkBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"전화번호 중복 버튼",Toast.LENGTH_SHORT).show();
-            }
-        });
-
         // 수정 버튼
         editBtn = findViewById( R.id.editBtn );
         editBtn.setOnClickListener( new View.OnClickListener() {

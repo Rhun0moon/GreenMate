@@ -1,12 +1,18 @@
 package com.example.greenmate;
 
-import android.content.Context;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.fragment.app.Fragment;
+
+import com.example.greenmate.banner.Banner_1;
+import com.example.greenmate.banner.Banner_2;
+import com.example.greenmate.banner.Banner_3;
+import com.example.greenmate.banner.Banner_4;
+import com.example.greenmate.news.News_1;
+import com.example.greenmate.news.News_2;
+import com.example.greenmate.news.News_3;
+import com.example.greenmate.news.News_4;
 
 public class SliderAdapter extends FragmentStateAdapter {
     public int mCount, mVer;

@@ -1,12 +1,12 @@
 package com.example.greenmate;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.greenmate.eco.EcoDetailFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 

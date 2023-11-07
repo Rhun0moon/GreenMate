@@ -1,4 +1,4 @@
-package com.example.greenmate;
+package com.example.greenmate.news;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+
+import com.example.greenmate.R;
 
 public class News_1 extends Fragment {
     private RelativeLayout news1Layout;

@@ -49,15 +49,6 @@ public class JoinActivity extends AppCompatActivity {
             }
         });
 
-        // 중복확인 버튼 - 전화번호 중복 체크 -> 코드수정필요
-        checkBtn = findViewById(R.id.checkPhoneBtn);
-        checkBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"전화번호 중복 버튼",Toast.LENGTH_SHORT).show();
-            }
-        });
-
         // 가입 버튼
         joinBtn = findViewById( R.id.joinBtn );
         joinBtn.setOnClickListener( new View.OnClickListener() {

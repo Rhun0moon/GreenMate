@@ -189,7 +189,7 @@
 
                 <EditText
                     android:id="@+id/joinPhone"
-                    android:layout_width="265dp"
+                    android:layout_width="330dp"
                     android:layout_height="50dp"
                     android:layout_below="@+id/textViewPhone"
                     android:gravity="left|center"
@@ -197,23 +197,6 @@
                     android:textSize="14sp"
                     android:hint="'-'포함하여 입력"
                     android:inputType="phone"/>
-
-                <Button
-                    android:id="@+id/checkPhoneBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_toRightOf="@+id/joinPhone"
-                    android:layout_below="@+id/joinName"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="25dp"
-                    android:gravity="center"
-                    android:padding="0dp"
-
-                    android:background="@drawable/patten01"
-                    android:text="중복확인"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/suite_bold"
-                    android:textSize="16dp" />
 
                 <!-- 생년월일 -->
                 <TextView

@@ -1,4 +1,4 @@
-package com.example.greenmate;
+package com.example.greenmate.eco;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,8 +7,10 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class EcoDetailFragment extends Fragment {
-    public EcoDetailFragment() {
+import com.example.greenmate.R;
+
+public class EcoPlaceFragment extends Fragment {
+    public EcoPlaceFragment() {
         // Required empty public constructor
     }
 
@@ -18,7 +20,7 @@ public class EcoDetailFragment extends Fragment {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.fragment_ecodetail, container, false);
+        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.fragment_ecoplace, container, false);
         return view;
     }
 }

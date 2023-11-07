@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class MyFragment extends Fragment{
-    private LinearLayout editprofileLayout, warningsLayout, reviewLayout, withdrawalLayout, logoutLayout;
+    private LinearLayout editprofileLayout, reviewLayout, withdrawalLayout, logoutLayout;
 
     public MyFragment() {
         // Required empty public constructor
@@ -39,18 +39,6 @@ public class MyFragment extends Fragment{
             }
         });
 
-
-        warningsLayout = view.findViewById(R.id.warningsLayout);
-        warningsLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(),"준비중",Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(getActivity(), WarningsActivity.class);
-                //startActivity(intent);
-            }
-        });
-
-
         reviewLayout = view.findViewById(R.id.reviewLayout);
         reviewLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +49,6 @@ public class MyFragment extends Fragment{
             }
         });
 
-
         withdrawalLayout = view.findViewById(R.id.withdrawalLayout);
         withdrawalLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +57,6 @@ public class MyFragment extends Fragment{
                 startActivity(intent);
             }
         });
-
 
         logoutLayout = view.findViewById(R.id.logoutLayout);
         logoutLayout.setOnClickListener(new View.OnClickListener() {
