@@ -26,7 +26,7 @@ public class IntroActivity extends Activity {
                 startActivity(intent);
                 finish();
             }
-        },3000); // 3초 있다 메인액티비티로
+        },1000); // 1초 있다 메인액티비티로
     }
 
     @Override

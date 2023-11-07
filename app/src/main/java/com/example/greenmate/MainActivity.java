@@ -6,7 +6,7 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.greenmate.eco.EcoDetailFragment;
+import com.example.greenmate.eco.EcoPlaceFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 
@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment homeFragment;
     QuizFragment quizFragment;
     MyFragment myFragment;
-    EcoDetailFragment ecoDetailFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +22,9 @@ public class MainActivity extends AppCompatActivity {
         homeFragment = new HomeFragment();
         quizFragment = new QuizFragment();
         myFragment = new MyFragment();
-        ecoDetailFragment = new EcoDetailFragment();
 
+
+        // 화면 전환 프래그먼트 선언 및 초기 화면 설정
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
 
         NavigationBarView navigationBarView = findViewById(R.id.bottomBar);

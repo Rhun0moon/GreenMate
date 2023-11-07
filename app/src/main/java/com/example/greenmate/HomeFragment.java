@@ -5,9 +5,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager2.widget.CompositePageTransformer;
-import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Handler;
@@ -19,8 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.greenmate.eco.EcoPlaceFragment;
 
 import me.relex.circleindicator.CircleIndicator3;
 
@@ -30,9 +26,19 @@ public class HomeFragment extends Fragment {
     private SliderAdapter pagerAdapterBanner, pagerAdapterNews;
     private CircleIndicator3 mIndicator1;
     private int num_page = 4;
+
+    EcoPlaceFragment ecoPlaceFragment;
+
     public HomeFragment() {
         // Required empty public constructor
     }
+
+    /*
+    public static HomeFragment newInstance() {
+
+        return new HomeFragment();
+    }
+    */
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +48,8 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_home, container, false);
+
+        ecoPlaceFragment = new EcoPlaceFragment();
 
         // ecodetailLayout 레이아웃 (분리수거방법)
         ecodetailLayout = view.findViewById(R.id.ecodetailLayout);
@@ -70,9 +78,8 @@ public class HomeFragment extends Fragment {
         ecoplaceLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, ecoPlaceFragment).addToBackStack(null).commit();
                 Toast.makeText(getActivity(),"지역별배출요령",Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(getActivity(), LoginActivity.class);
-                //startActivity(intent);
             }
         });
 

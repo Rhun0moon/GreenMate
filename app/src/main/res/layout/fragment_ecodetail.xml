@@ -8,5 +8,13 @@
     android:orientation="vertical"
     tools:context=".eco.EcoDetailFragment"
     android:background="@color/redblack">
-
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:searchIcon="@drawable/icon_white_search"
+        app:closeIcon="@drawable/icon_white_x"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@color/white"
+        app:queryHint="검색어를 입력하세요."/>
 </LinearLayout>
