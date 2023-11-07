@@ -1,4 +1,4 @@
-package com.example.greenmate;
+package com.example.greenmate.activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -6,7 +6,10 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.greenmate.eco.EcoPlaceFragment;
+import com.example.greenmate.fragment.HomeFragment;
+import com.example.greenmate.fragment.MyFragment;
+import com.example.greenmate.fragment.QuizFragment;
+import com.example.greenmate.R;
 import com.google.android.material.navigation.NavigationBarView;
 
 

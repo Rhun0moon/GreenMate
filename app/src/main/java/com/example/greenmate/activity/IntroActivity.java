@@ -1,10 +1,12 @@
-package com.example.greenmate;
+package com.example.greenmate.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
+
+import com.example.greenmate.R;
 
 public class IntroActivity extends Activity {
     int[] images = new int[] {R.drawable.page_color, R.drawable.page_food, R.drawable.page_flower};

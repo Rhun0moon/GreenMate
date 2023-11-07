@@ -1,4 +1,4 @@
-package com.example.greenmate;
+package com.example.greenmate.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.greenmate.R;
+import com.example.greenmate.SliderAdapter;
+import com.example.greenmate.eco.EcoDetailFragment;
 import com.example.greenmate.eco.EcoPlaceFragment;
 
 import me.relex.circleindicator.CircleIndicator3;
@@ -28,6 +31,7 @@ public class HomeFragment extends Fragment {
     private int num_page = 4;
 
     EcoPlaceFragment ecoPlaceFragment;
+    EcoDetailFragment ecoDetailFragment;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -50,15 +54,15 @@ public class HomeFragment extends Fragment {
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_home, container, false);
 
         ecoPlaceFragment = new EcoPlaceFragment();
+        ecoDetailFragment = new EcoDetailFragment();
 
         // ecodetailLayout 레이아웃 (분리수거방법)
         ecodetailLayout = view.findViewById(R.id.ecodetailLayout);
         ecodetailLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, ecoDetailFragment).addToBackStack(null).commit();
                 Toast.makeText(getActivity(),"분리수거방법",Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(getActivity(), LoginActivity.class);
-                //startActivity(intent);
             }
         });
 
@@ -67,9 +71,8 @@ public class HomeFragment extends Fragment {
         ecosearchLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, ecoPlaceFragment).addToBackStack(null).commit();
                 Toast.makeText(getActivity(),"친환경제품",Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(getActivity(), LoginActivity.class);
-                //startActivity(intent);
             }
         });
 

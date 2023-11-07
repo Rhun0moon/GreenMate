@@ -1,4 +1,4 @@
-package com.example.greenmate;
+package com.example.greenmate.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.greenmate.R;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText loginId, loginPw;
