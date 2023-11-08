@@ -20,6 +20,7 @@ import com.example.greenmate.R;
 import com.example.greenmate.SliderAdapter;
 import com.example.greenmate.eco.EcoDetailFragment;
 import com.example.greenmate.eco.EcoPlaceFragment;
+import com.example.greenmate.eco.EcoSearchFragment;
 
 import me.relex.circleindicator.CircleIndicator3;
 
@@ -32,6 +33,7 @@ public class HomeFragment extends Fragment {
 
     EcoPlaceFragment ecoPlaceFragment;
     EcoDetailFragment ecoDetailFragment;
+    EcoSearchFragment ecoSearchFragment;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -53,8 +55,9 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup view = (ViewGroup)inflater.inflate(R.layout.fragment_home, container, false);
 
-        ecoPlaceFragment = new EcoPlaceFragment();
         ecoDetailFragment = new EcoDetailFragment();
+        ecoSearchFragment = new EcoSearchFragment();
+        ecoPlaceFragment = new EcoPlaceFragment();
 
         // ecodetailLayout 레이아웃 (분리수거방법)
         ecodetailLayout = view.findViewById(R.id.ecodetailLayout);
@@ -71,7 +74,7 @@ public class HomeFragment extends Fragment {
         ecosearchLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, ecoPlaceFragment).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, ecoSearchFragment).addToBackStack(null).commit();
                 Toast.makeText(getActivity(),"친환경제품",Toast.LENGTH_SHORT).show();
             }
         });

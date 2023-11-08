@@ -23,9 +23,8 @@ public class EcoDetailFragment extends Fragment {
     private FoldingCell foldingCell;
     private TextView categoryView;
     private CheckBox ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10, ch11, ch12, ch13, ch14, ch15, ch16;
-    private Button catagoryBtn, closeBtn, detailBtn11, detailBtn21;
+    private Button catagoryBtn, closeBtn, detailBtn1, detailBtn2;
     private LinearLayout cellTitleView;
-
     EcoDetailViewFragment ecoDetailViewFragment;
     public EcoDetailFragment() {
         // Required empty public constructor
@@ -104,8 +103,8 @@ public class EcoDetailFragment extends Fragment {
         });
 
         ecoDetailViewFragment = new EcoDetailViewFragment();
-        detailBtn11 = (Button) view.findViewById(R.id.detailBtn11);
-        detailBtn11.setOnClickListener(new View.OnClickListener() {
+        detailBtn1 = (Button) view.findViewById(R.id.detailBtn1);
+        detailBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, ecoDetailViewFragment).addToBackStack(null).commit();
@@ -113,8 +112,8 @@ public class EcoDetailFragment extends Fragment {
             }
         });
 
-        detailBtn21 = (Button) view.findViewById(R.id.detailBtn21);
-        detailBtn21.setOnClickListener(new View.OnClickListener() {
+        detailBtn2 = (Button) view.findViewById(R.id.detailBtn2);
+        detailBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, ecoDetailViewFragment).addToBackStack(null).commit();
