@@ -50,8 +50,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -108,8 +108,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp">
             <ProgressBar
                 android:id="@+id/userLevel"
                 android:layout_width="match_parent"
@@ -140,7 +140,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="20dp"
+                    android:padding="30dp"
                     android:orientation="vertical"
                     android:gravity="left|bottom"
                     android:backgroundTint="@color/MainColorY"
@@ -167,7 +167,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="20dp"
+                    android:padding="30dp"
                     android:orientation="horizontal"
                     android:gravity="left|bottom"
                     android:backgroundTint="@color/MainColorB"
@@ -215,7 +215,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="20dp"
+                    android:padding="30dp"
                     android:orientation="vertical"
                     android:gravity="left|bottom"
                     android:backgroundTint="@color/MainColorS"
@@ -243,7 +243,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="20dp"
+                    android:padding="30dp"
                     android:orientation="vertical"
                     android:gravity="left|bottom"
                     android:backgroundTint="@color/MainColorG"
@@ -274,7 +274,7 @@
             android:id="@+id/logoutLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
             android:clickable="true"
             android:orientation="horizontal">
