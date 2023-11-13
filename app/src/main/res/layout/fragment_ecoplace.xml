@@ -10,9 +10,9 @@
     android:background="@color/redblack">
     <Spinner
         android:id="@+id/areaState"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="25dp"
         android:background="@drawable/patten01"
         android:backgroundTint="@color/white"
@@ -24,11 +24,11 @@
         android:tooltipText="도" />
     <Spinner
         android:id="@+id/areaCity"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_below="@+id/areaState"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="70dp"
         android:paddingTop="5dp"
         android:textAlignment="center"
         android:entries="@array/city_gb"
@@ -40,11 +40,11 @@
 
     <Button
         android:id="@+id/searchBtn"
-        android:layout_width="80dp"
+        android:layout_width="110dp"
         android:layout_height="70dp"
         android:layout_toRightOf="@+id/areaCity"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="25dp"
         android:background="@drawable/patten02"
         android:backgroundTint="@color/MainColorB"
         android:text="검색"
@@ -92,7 +92,7 @@
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/areaURL"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/patten01"
         android:backgroundTint="@color/MainColorY"
         android:text="자세한 쓰레기장 위치 보기"
